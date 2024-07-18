@@ -123,7 +123,7 @@ input::placeholder{
     justify-self: flex-start;
 }
 .example{
-    font-family: cursive;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #ff0000;
     font-size: 1.1rem;
     position: relative;

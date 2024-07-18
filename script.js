@@ -28,26 +28,26 @@ async function dictionary(){
         define2.innerText ="";
     }
     noun.innerHTML=data[0].meanings[0].partOfSpeech;
-    if(data[0].meanings[0].definitions[0].example)
-    {
-        example.innerText =data[0].meanings[0].definitions[0].example;
-    }
-    else if(data[0].meanings[1].definitions[0].example)
-    {
-        example.innerText =data[0].meanings[1].definitions[0].example;
-    }
-    else if(data[0].meanings[2].definitions[0].example)
-    {
-        example.innerText =data[0].meanings[2].definitions[0].example;
-    }
-    else if(data[0].meanings[1].definitions[1].example)
-        {
-            example.innerText =data[0].meanings[1].definitions[1].example;
+
+    let foundExample = false;
+    for (let meaning of data[0].meanings) {
+        for (let definition of meaning.definitions) {
+            if (definition.example) {
+                example.innerText = definition.example;
+                foundExample = true;
+                break;
+            }
         }
-    else{
-        example.innerText ="";
+        if (foundExample) {
+            break;
+        }
+    }
+    
+    if (!foundExample) {
+        example.innerText = "";
     }
 };
+
 
 button.addEventListener('click',()=>{
     dictionary();
