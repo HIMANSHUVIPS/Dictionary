@@ -13,11 +13,20 @@ body{
     width: 100%;
 }
 .main_container{
-    width: auto;
+    width: 30%;
     height: auto;
     background-color: #C8ACD6;
     padding: 30px;
     border-radius: 30px;
+}
+.heading{
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2rem;
+    color: #ff0000;
+    font-family: "poppins";
+    position: relative; /* Ensure the pseudo-element positions relative to this */
+    letter-spacing: 3px;
 }
 .main_container .inputs{
     display: flex;
