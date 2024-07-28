@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="./script.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -17,34 +18,47 @@
     <title>Document</title>
 </head>
 
-<body>
-    <div class="main_container">
-        <h2 class="heading">DICTIONARY</h2>
-        <div class="inputs">
+<body class="p-2">
+    <div class="main_container rounded-md ">
+        <h2 style="text-decoration: underline;" class="heading font-mono">DICTIONARY</h2>
+        <div class="inputs rounded-md">
             <div class="input">
-                <input type="text" name="" id="" placeholder="Enter:">
+                <input type="text"  name="" class="rounded-md" id="temp" placeholder="Enter:">
             </div>
             <div class="srch_btn">
                 <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
+            
         </div>
+        <div class="flex justify-center flex-wrap  md:m0 p-2">
+            <button class="m-2 m-2 font-mono p-1 border-black rounded-md border-2" value="Intellect" onclick="clicked('Intellect')">Intellect</button>
+            <button class="m-2 font-mono p-1 border-black rounded-md border-2" value="Annoying" onclick="clicked('Annoying')">Annoying</button>
+            <button class="m-2 font-mono p-1 border-black rounded-md border-2" value="Asperity" onclick="clicked('Asperity')">Asperity</button>
+            <button class="m-2 font-mono p-1 border-black rounded-md border-2" value="Obey" onclick="clicked('Obey')">Obey</button>
+        </div>
+        and many more..
         <div class="name">
-            <div class="word">
-                <h1>Hello</h1>
+            <div class="word text-[30px] underline text-green-800">
+                <h1></h1>
             </div>
-            <div class="audio">
-                <img src="./images/volume.png" alt="" srcset="">
-            </div>
+            
         </div>
-        <div class="noun"></div>
+       <div>
+        
+        <div class="noun font-mono text-blue-900 text-[20px]"></div>
+
+       </div>
+        
         <div class="define">
             <div id="define">
-                Lorem ipsum dolor sit amet.
+                
             </div>
             <div id="define2">
                 <!-- Lorem ipsum dolor sit amet. -->
             </div>
+            <span class="exTitle font-mono"></span>
             <div class="example">
+                
                 <!-- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit distinctio sed asperiores mollitia doloribus. Incidunt. -->
             </div>
         </div>

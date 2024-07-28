@@ -3,9 +3,18 @@ const input = document.querySelector('input');
 const namee = document.querySelector('h1');
 const define = document.querySelector('#define');
 const example = document.querySelector(".example");
+const temp = document.querySelector("#temp");
 const noun = document.querySelector('.noun');
+const exTitle = document.querySelector('.exTitle');
 const img = document.querySelector('img')
 const define2 = document.querySelector('#define2');
+
+
+const clicked=(e)=>
+{
+    temp.value=e;
+}
+
 
 async function dictionary(){
     const api = `https://api.dictionaryapi.dev/api/v2/entries/en/${input.value}`;
@@ -34,6 +43,7 @@ async function dictionary(){
         for (let definition of meaning.definitions) {
             if (definition.example) {
                 example.innerText = definition.example;
+                exTitle.innerText="Example: ";
                 foundExample = true;
                 break;
             }
